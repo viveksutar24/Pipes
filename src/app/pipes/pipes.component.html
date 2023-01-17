@@ -1,0 +1,66 @@
+<div class="container p-5 ">
+
+
+  <h1 class="text-primary fw-bolder pb-5 text-center"> | PIPES | </h1>
+
+
+
+
+  <ul class="fw-bolder bg-danger rounded-4">
+    <li>Time</li>
+    <li>Date</li>
+    <li>Currency</li>
+    <li>Slice</li>
+    <li>Decimal Number Pipe</li>
+    <li>Decimal Number into Percentage</li>
+  </ul>
+
+
+
+  <h1>Defualt Date </h1>
+  <h4 class="bg-success"> {{ today }} </h4>
+
+
+  <h1>"date" Using Pipe</h1>
+  <h4 class="bg-secondary">{{ today | date }}</h4>
+
+
+  <h1>dd/MM/yyyy by INDIAN Format</h1>
+  <h4 class="bg-warning"> {{ today | date:"dd/MM/yyyy" }} </h4>
+
+  <h1>dd/MM/yyyy by INDIAN Format</h1>
+  <h4 class="bg-info"> {{ today | date:"dd/MM/yyyy hh:mm" }} </h4>
+
+
+  <h1>Currency in INDIAN Rs</h1>
+  <h4 class="bg-danger"> {{ currency | currency:"INR" }} </h4>
+
+  <h1>Currency in EUROPEAN EUR</h1>
+  <h4 class="bg-success"> {{ currency | currency:"EUR" }} </h4>
+
+  <h1>Currency in AMERICAN Dollars</h1>
+  <h4 class="bg-warning"> {{ currency | currency:"USD" }} </h4>
+
+
+  <h1>Slice in Array</h1>
+  <h3 class="bg-success">{{ fruits }}</h3>
+  <h3 class="bg-success">{{ fruits | slice:2 }}</h3>
+  <h3 class="bg-success">{{ fruits | slice:2:4 }}</h3>
+
+  <h1>Number (Decimal Number)</h1>
+  <h3 class="bg-info">  {{ 8.7682391709 | number }} </h3>
+  <h3 class="bg-info">  {{ 8.7682391709 | number:'3.8' }} </h3>
+  <h3 class="bg-info">  {{ 8.879434 | number:'3.3' }} </h3>
+
+
+  <h1>Decimal Numbers in Percentage</h1>
+  <h3 class="bg-primary">{{ 0.787299787 | percent }}</h3>
+
+
+  <h1>JSON Pipe</h1>
+  <h3 class="bg-danger" > {{ name | json }} </h3>
+
+
+  <h1>Square</h1>
+  <h3> {{ 5 | square }} </h3>
+</div>
